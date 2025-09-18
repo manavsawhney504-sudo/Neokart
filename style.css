@@ -1,0 +1,165 @@
+/* 🌐 Base Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0f172a;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+#searchBar,
+#categoryFilter,
+#addressInput {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+#searchBar {
+  width: 220px;
+}
+
+#categoryFilter {
+  width: 160px;
+}
+
+button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* 🛍️ Product Grid */
+#productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h2 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.cart-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.cart-controls input {
+  width: 60px;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* 📦 Cart & Checkout Pages */
+section {
+  padding: 2rem;
+  background: #fff;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#cartPage,
+#checkoutPage {
+  min-height: 100vh;
+  display: none;
+}
+
+#cartItems div {
+  margin-bottom: 0.5rem;
+}
+
+#cartTotal {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* 🔁 Visibility Control */
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+body.dark header {
+  background: #0f172a;
+}
+
+body.dark .card {
+  background: #334155;
+  color: #f1f5f9;
+}
+
+body.dark section {
+  background: #475569;
+}
+
+body.dark input,
+body.dark select {
+  background: #64748b;
+  color: white;
+  border: none;
+}
+
+body.dark button {
+  background: #3b82f6;
+}
+
+body.dark button:hover {
+  background: #2563eb;
+}

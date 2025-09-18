@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoKart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 🔷 Header -->
+  <header>
+    <h1>NeoKart</h1>
+    <input type="text" id="searchBar" placeholder="Search products..." oninput="filterProducts()" />
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="">All Categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Home">Home</option>
+      <option value="Books">Books</option>
+      <option value="Personal Care">Personal Care</option>
+    </select>
+    <button onclick="toggleDarkMode()">🌙</button>
+    <button onclick="showCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+  </header>
+
+  <!-- 🛍️ Product Grid -->
+  <main id="productGrid"></main>
+
+  <!-- 🧾 Cart Page -->
+  <section id="cartPage" class="hidden">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <p>Total: ₹<span id="cartTotal">0</span></p>
+    <button onclick="checkout()">Proceed to Checkout</button>
+    <button onclick="hideCart()">Back to Shop</button>
+  </section>
+
+  <!-- 📦 Checkout Page -->
+  <section id="checkoutPage" class="hidden">
+    <h2>Checkout</h2>
+    <input type="text" placeholder="Enter Address" id="addressInput" />
+    <button onclick="confirmOrder()">Confirm Order</button>
+    <button onclick="hideCheckout()">Back to Cart</button>
+  </section>
+
+  <!-- 📦 Scripts -->
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
